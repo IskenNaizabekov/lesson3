@@ -1,4 +1,4 @@
-const orders = [
+var orders = [
     {
         id: 1,
         customer: "Jhon",
@@ -25,19 +25,18 @@ const orders = [
     }
 ];
 
-let totalRevenue = 0;
-let maxOrderAmount = 0;
-let maxOrderCustomer = "";
+var totalRevenue = 0;
+var maxOrderAmount = 0;
+var maxOrderCustomer = "";
 
-for (let i = 0; i < orders.length; i++) {
-    let order = orders[i];
-    let orderTotal = 0;
+for (var i = 0; i < orders.length; i++) {
+    var order = orders[i];
+    var orderTotal = 0;
 
-    for (let j = 0; j < order.items.length; j++) {
-        let item = order.items[j];
+    for (var j = 0; j < order.items.length; j++) {
+        var item = order.items[j];
         orderTotal += item.price * item.quantity;
     }
-
     console.log(`Заказ #${order.id} (${order.customer}): ${orderTotal} сом`);
 
     totalRevenue += orderTotal;
